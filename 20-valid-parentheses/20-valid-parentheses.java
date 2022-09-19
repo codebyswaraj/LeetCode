@@ -5,16 +5,13 @@ class Solution {
         for(char c:s.toCharArray()){
             switch(c){
                 case '}':
-                    if(stack.isEmpty()) return false;
-                    if(stack.pop()=='{')continue;
+                    if(!stack.isEmpty() && stack.pop()=='{')continue;
                     else return false;
                 case ']':
-                    if(stack.isEmpty()) return false;
-                    if(stack.pop()=='[')continue;
+                    if(!stack.isEmpty() && stack.pop()=='[')continue;
                     else return false;
                 case ')':
-                    if(stack.isEmpty()) return false;
-                    if(stack.pop()=='(')continue;
+                    if(!stack.isEmpty() && stack.pop()=='(')continue;
                     else return false;
                 default:
                     stack.push(c);

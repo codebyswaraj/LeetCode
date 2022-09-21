@@ -9,7 +9,6 @@ class Solution {
         
     }
      public void floodFill(int[][] image, int sr, int sc, int prevColor, int newColor) {
-         System.out.println(sr + "   " + sc);
          if(sr < 0 || sr >= image.length || sc <0 || sc >=image[0].length) return;
          if(image[sr][sc] != prevColor) return;
          image[sr][sc] = newColor;
